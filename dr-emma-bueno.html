@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Emma Bueno - Nephrology Consultants of Jax</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Top Bar -->
+    <div class="bg-gray-900 text-white py-2">
+        <div class="container mx-auto px-4 flex justify-between items-center text-sm">
+            <div class="flex items-center space-x-6">
+                <div class="flex items-center space-x-2">
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                    <span>(904) 398-8266</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-2">
+                    <i data-lucide="map-pin" class="w-4 h-4"></i>
+                    <span>3129 Hendricks ve, Jacksonville, FL 32207</span>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-2">
+                <i data-lucide="clock" class="w-4 h-4"></i>
+                <span>Mon-Thu: 8:30AM-5PM | Fri: 8:30AM-12:30PM</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <img src="images/NCJ LOGO_TEMP.png" alt="Nephrology Consultants of Jax Logo" class="h-16 w-auto">
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-800">Nephrology Consultants of Jax</h1>
+                        <p class="text-sm text-gray-600">Expert Kidney Care & Nephrology Services</p>
+                    </div>
+                  </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="NCOJ.HTML" class="text-gray-700 hover:text-gray-900 font-medium transition-colors">Home</a>
+                    <a href="location.html" class="text-gray-700 hover:text-gray-900 font-medium transition-colors">Location</a>
+                    <a href="services.html" class="text-gray-700 hover:text-gray-900 font-medium transition-colors">Services</a>
+                    <a href="about.html" class="text-gray-700 hover:text-gray-900 font-medium transition-colors">About</a>
+                    
+                    <!-- Doctors Dropdown -->
+                  <div class="relative group" id="doctor-dropdown">
+                    <div class="text-gray-700 hover:text-gray-900 font-medium transition-colors flex items-center cursor-pointer">
+                      <span>Our Doctors</span>
+                      <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
+                    </div>
+                    <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                      <a href="dr-hem chataut.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors">Dr. Hem Chataut</a>
+                      <a href="dr-jeremy-carlson.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors">Dr. Jeremy Carlson</a>
+                      <a href="dr-haritha-sakhamuri.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors">Dr. Haritha Sakhamuri</a>
+                      <a href="dr-emma-bueno.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors">Dr. Emma Bueno</a>
+                    </div>
+                  </div>
+                    
+                  <div class="flex items-center space-x-4">
+                    <a href="https://mycw244.ecwcloud.com/portal28425/jsp/100mp/login_otp.jsp" target="_blank"
+                      class="bg-gray-800 text-white px-6 py-2 rounded-lg hover:bg-gray-900 transition-colors font-medium">
+                      Patient Portal
+                    </a>
+                    <a href="https://mycw244.ecwcloud.com/portal28425/jsp/100mp/login_otp.jsp" target="_blank"
+                      class="bg-gray-800 text-white px-6 py-2 rounded-lg hover:bg-gray-900 transition-colors font-medium">
+                      Bill Pay
+                    </a>
+                  </div>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-md hover:bg-gray-100">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav id="mobile-menu" class="lg:hidden pb-4 border-t hidden">
+                <div class="flex flex-col space-y-4 pt-4">
+                    <a href="NCOJ.HTML" class="text-gray-700 hover:text-gray-900 font-medium">Home</a>
+                    <a href="services.html" class="text-gray-700 hover:text-gray-900 font-medium">Services</a>
+                    <a href="about.html" class="text-gray-700 hover:text-gray-900 font-medium">About</a>
+                    <div class="pl-4">
+                        <p class="text-gray-500 font-medium mb-2">Our Doctors:</p>
+                        <a href="dr-hem chataut.html" class="block text-gray-700 hover:text-gray-900 font-medium py-1">Dr. Hem Chataut</a>
+                        <a href="dr-jeremy-carlson.html" class="block text-gray-700 hover:text-gray-900 font-medium py-1">Dr. Jeremy Carlson</a>
+                        <a href="dr-haritha-sakhamuri.html" class="block text-gray-700 hover:text-gray-900 font-medium py-1">Dr. Haritha Sakhamuri</a>
+                        <a href="dr-emma-bueno.html" class="block text-gray-900 font-bold py-1">Dr. Emma Bueno</a>
+                    </div>
+                    <a href="index.html#contact" class="text-gray-700 hover:text-gray-900 font-medium">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Doctor Profile Section -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="fade-in">
+                    <div class="relative">
+                        <img src="https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Dr. Emma Bueno" class="rounded-2xl shadow-2xl w-full h-[600px] object-cover">
+                        <div class="absolute -bottom-6 -right-6 w-full h-full bg-pink-200 rounded-2xl -z-10"></div>
+                    </div>
+                </div>
+
+                <div class="space-y-8 fade-in">
+                    <div>
+                        <h1 class="text-5xl lg:text-6xl font-bold text-gray-900 mb-4">Dr. Emma Bueno</h1>
+                        <p class="text-2xl text-pink-600 font-semibold mb-6">Nephrologist</p>
+                        <p class="text-xl text-gray-600 leading-relaxed">
+                            Dr. Emma Bueno, originally from Central America, specializes in chronic kidney disease, diabetic and 
+                            hypertensive kidney disease, as well as transplantation and transplant function.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <i data-lucide="graduation-cap" class="w-8 h-8 text-pink-600 mb-3"></i>
+                            <h3 class="font-bold text-gray-900 mb-2">Education</h3>
+                            <p class="text-gray-600">University of Florida, Jacksonville, Florida</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <i data-lucide="clock" class="w-8 h-8 text-pink-600 mb-3"></i>
+                            <h3 class="font-bold text-gray-900 mb-2">Experience</h3>
+                            <p class="text-gray-600">10+ Years</p>
+                        </div>
+                    </div>
+                    <div class="mt-8 flex space-x-4">
+                    <!-- Schedule Button -->
+                    <a href="ncoj.html#appointment-form">
+                      <button class="bg-pink-600 text-white px-8 py-4 rounded-lg hover:bg-pink-700 transition-colors font-semibold text-lg shadow-lg">
+                        Schedule with Dr. Bueno
+                      </button>
+                    </a>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+    <!-- Specialties Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">Areas of Expertise</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Dr. Bueno specializes in interventional nephrology with expertise in minimally invasive procedures and vascular access.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <i data-lucide="zap" class="w-12 h-12 text-pink-600 mb-6"></i>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Interventional Procedures</h3>
+                    <p class="text-gray-600">Minimally invasive procedures for kidney and vascular access complications.</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <i data-lucide="activity" class="w-12 h-12 text-pink-600 mb-6"></i>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Vascular Access</h3>
+                    <p class="text-gray-600">Expert management of dialysis access including fistulas, grafts, and catheters.</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <i data-lucide="microscope" class="w-12 h-12 text-pink-600 mb-6"></i>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Advanced Diagnostics</h3>
+                    <p class="text-gray-600">State-of-the-art diagnostic procedures including advanced imaging and biopsies.</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <i data-lucide="target" class="w-12 h-12 text-pink-600 mb-6"></i>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Precision Medicine</h3>
+                    <p class="text-gray-600">Personalized treatment approaches using the latest advances in nephrology.</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <i data-lucide="heart-pulse" class="w-12 h-12 text-pink-600 mb-6"></i>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Critical Care Nephrology</h3>
+                    <p class="text-gray-600">Specialized care for critically ill patients with acute kidney injury.</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <i data-lucide="trending-up" class="w-12 h-12 text-pink-600 mb-6"></i>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Innovation & Research</h3>
+                    <p class="text-gray-600">Leading research in interventional nephrology and new treatment modalities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Credentials Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center">Professional Credentials</h2>
+                
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Education & Training</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-4">
+                                <i data-lucide="award" class="w-6 h-6 text-pink-600 mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-gray-900">Medical Degree</h4>
+                                    <p class="text-gray-600">Mercer University, Macon, Ga</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <i data-lucide="award" class="w-6 h-6 text-pink-600 mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-gray-900">Internal Medicine Residency</h4>
+                                    <p class="text-gray-600">University of Florida, Jacksonville, Florida</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <i data-lucide="award" class="w-6 h-6 text-pink-600 mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-gray-900">Nephrology Fellowship</h4>
+                                    <p class="text-gray-600">Mayo Clinic, Jacksonville, Florida</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <i data-lucide="award" class="w-6 h-6 text-pink-600 mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-gray-900">Transplant Nephrology Fellowship</h4>
+                                    <p class="text-gray-600">University of Florida, Gainesville, Florida</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Certifications & Memberships</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-4">
+                                <i data-lucide="shield" class="w-6 h-6 text-pink-600 mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-gray-900">Board Certified</h4>
+                                    <p class="text-gray-600">Internal Medicine & Nephrology</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <i data-lucide="shield" class="w-6 h-6 text-pink-600 mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-gray-900">American Society of Nephrology</h4>
+                                    <p class="text-gray-600">Active Member</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <i data-lucide="shield" class="w-6 h-6 text-pink-600 mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-gray-900">Young Investigator Award</h4>
+                                    <p class="text-gray-600">American Society of Nephrology</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-pink-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-6">Schedule Your Consultation with Dr. Bueno</h2>
+            <p class="text-xl text-pink-100 mb-8 max-w-3xl mx-auto">
+                Experience cutting-edge interventional nephrology care with minimally invasive procedures. 
+                Dr. Bueno is accepting new patients.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-white text-pink-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg">
+                    Book Appointment
+                </button>
+                <a href="index.html#contact" class="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-pink-600 transition-colors font-semibold text-lg">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-4 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-3">
+                        <img src="public/NCJ LOGO_TEMP.png" alt="NCJ Logo" class="h-12 w-auto filter brightness-0 invert">
+                        <div>
+                            <h3 class="text-xl font-bold">Nephrology Consultants</h3>
+                            <p class="text-gray-400">of Jax, LLC</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        Providing expert kidney care and nephrology services to Northeast Florida 
+                        for over 20 years. Your kidney health is our mission.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="index.html#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Doctors -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Our Doctors</h4>
+                    <ul class="space-y-3">
+                        <li><a href="dr-hem-chataut.html" class="text-gray-300 hover:text-white transition-colors">Dr. Hem Chataut</a></li>
+                        <li><a href="dr-jeremy-carlson.html" class="text-gray-300 hover:text-white transition-colors">Dr. Jeremy Carlson</a></li>
+                        <li><a href="dr-haritha-sakhamuri.html" class="text-gray-300 hover:text-white transition-colors">Dr. Haritha Sakhamuri</a></li>
+                        <li><a href="dr-emma-bueno.html" class="text-white font-bold">Dr. Emma Bueno</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Contact Info</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-gray-400 mt-1 flex-shrink-0"></i>
+                            <div class="text-gray-300">
+                                <p>1234 Medical Plaza</p>
+                                <p>Jacksonville, FL 32207</p>
+                                <p>Suite 200</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-gray-400 flex-shrink-0"></i>
+                            <div class="text-gray-300">
+                                <p>Office: (904) 555-0123</p>
+                                <p>Emergency: (904) 555-0911</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-gray-400 flex-shrink-0"></i>
+                            <div class="text-gray-300">
+                                <p>info@ncjconsultants.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="mt-12 pt-8 border-t border-gray-800">
+                <div class="text-center text-gray-400 text-sm">
+                    © 2024 Nephrology Consultants of Jax, LLC. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Fade in animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Nephrology Consultants of Jax</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Top Bar -->
+    <div class="bg-gray-900 text-white py-2">
+        <div class="container mx-auto px-4 flex justify-between items-center text-sm">
+            <div class="flex items-center space-x-6">
+                <div class="flex items-center space-x-2">
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                    <span>(904) 398-8266</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-2">
+                    <i data-lucide="map-pin" class="w-4 h-4"></i>
+                    <span>3129 Hendricks Ave, Jacksonville, FL 32207</span>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-2">
+                <i data-lucide="clock" class="w-4 h-4"></i>
+                <span>Mon-Thu: 8:30AM-5PM | Fri: 8:30AM-12:30PM</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <img src="images/NCJ LOGO_TEMP.png" alt="Nephrology Consultants of Jax Logo" class="h-16 w-auto">
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-800">Nephrology Consultants of Jax</h1>
+                        <p class="text-sm text-gray-600">Expert Kidney Care & Nephrology Services</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="NCOJ.HTML" class="text-gray-700 hover:text-gray-900 font-medium transition-colors">Home</a>
+                    <a href="location.html" class="text-gray-700 hover:text-gray-900 font-medium transition-colors">Locations</a>
+                    <a href="services.html" class="text-gray-900 font-bold border-b-2 border-gray-900">Services</a>
+                    <a href="about.html" class="text-gray-700 hover:text-gray-900 font-medium transition-colors">About</a>
+                    
+                    <!-- Doctors Dropdown -->
+                    <div class="relative group" id="doctor-dropdown">
+                      <div class="text-gray-700 hover:text-gray-900 font-medium transition-colors flex items-center cursor-pointer">
+                        <span>Our Doctors</span>
+                        <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
+                      </div>
+                      <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <a href="dr-hem chataut.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors">Dr. Hem Chataut</a>
+                        <a href="dr-jeremy-carlson.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors">Dr. Jeremy Carlson</a>
+                        <a href="dr-haritha-sakhamuri.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors">Dr. Haritha Sakhamuri</a>
+                        <a href="dr-emma-bueno.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors">Dr. Emma Bueno</a>
+                      </div>
+                      </div>
+                        <div class="flex items-center space-x-4">
+                          <a href="https://mycw244.ecwcloud.com/portal28425/jsp/100mp/login_otp.jsp" target="_blank"
+                            class="bg-gray-800 text-white px-6 py-2 rounded-lg hover:bg-gray-900 transition-colors font-medium">
+                            Patient Portal
+                          </a>
+                          <a href="https://mycw244.ecwcloud.com/portal28425/jsp/100mp/login_otp.jsp" target="_blank"
+                            class="bg-gray-800 text-white px-6 py-2 rounded-lg hover:bg-gray-900 transition-colors font-medium">
+                            Bill Pay
+                          </a>
+                        </div>
+                      </div>
+                  </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-md hover:bg-gray-100">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav id="mobile-menu" class="lg:hidden pb-4 border-t hidden">
+                <div class="flex flex-col space-y-4 pt-4">
+                    <a href="index.html" class="text-gray-700 hover:text-gray-900 font-medium">Home</a>
+                    <a href="services.html" class="text-gray-900 font-bold">Services</a>
+                    <a href="about.html" class="text-gray-700 hover:text-gray-900 font-medium">About</a>
+                    <div class="pl-4">
+                        <p class="text-gray-500 font-medium mb-2">Our Doctors:</p>
+                        <a href="dr-hem-chataut.html" class="block text-gray-700 hover:text-gray-900 font-medium py-1">Dr. Hem Chataut</a>
+                        <a href="dr-jeremy-carlson.html" class="block text-gray-700 hover:text-gray-900 font-medium py-1">Dr. Jeremy Carlson</a>
+                        <a href="dr-haritha-sakhamuri.html" class="block text-gray-700 hover:text-gray-900 font-medium py-1">Dr. Haritha Sakhamuri</a>
+                        <a href="dr-emma-bueno.html" class="block text-gray-700 hover:text-gray-900 font-medium py-1">Dr. Emma Bueno</a>
+                    </div>
+                    <a href="index.html#contact" class="text-gray-700 hover:text-gray-900 font-medium">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-br from-gray-50 to-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">Our Services</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Comprehensive nephrology services designed to address all aspects of kidney health, 
+                from prevention to advanced treatment options.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Chronic Kidney Disease -->
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group hover:-translate-y-2 fade-in">
+                    <div class="bg-blue-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors duration-300">
+                        <i data-lucide="droplets" class="w-8 h-8 text-blue-600 group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Chronic Kidney Disease</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Comprehensive management and treatment of chronic kidney disease with personalized care plans to slow progression and maintain quality of life.</p>
+                    
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-700">
+                            <div class="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
+                            Early detection and staging
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <div class="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
+                            Disease progression monitoring
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <div class="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
+                            Lifestyle and dietary counseling
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <div class="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
+                            Medication management
+                        </li>
+                    </ul>
+                    
+                    <button class="text-blue-600 font-semibold hover:text-blue-800 transition-colors">
+                        Learn More →
+                    </button>
+                </div>
+
+                <!-- Dialysis Services -->
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group hover:-translate-y-2 fade-in">
+                    <div class="bg-green-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-600 transition-colors duration-300">
+                        <i data-lucide="activity" class="w-8 h-8 text-green-600 group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Dialysis Services</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">State-of-the-art dialysis facilities with experienced medical staff providing comfortable, safe, and effective treatment options.</p>
+                    
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-700">
+                            <div class="w-2 h-2 bg-green-600 rounded-full mr-3"></div>
+                            In-center hemodialysis
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <div class="w-2 h-2 bg-green-600 rounded-full mr-3"></div>
+                            Peritoneal dialysis
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <div class="w-2 h-2 bg-green-600 rounded-full mr-3"></div>
+                            Home dialysis training
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <div class="w-2 h-2 bg-green-600 rounded-full mr-3"></div>
+                            Vascular access care
+                        </li>
+                    </ul>
+                    
+                    <button class="text-green-600 font-semibold hover:text-green-800 transition-colors">
+                        Learn More →
+                    </button>
+                </div>
+
+                <!-- Hypertension Management -->
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group hover:-translate-y-2 fade-in">
+                    <div class="bg-red-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-red-600 transition-colors duration-300">
+                        <i data-lucide="heart" class="w-8 h-8 text-red-600 group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Hypertension Management</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Specialized treatment for kidney-related high blood pressure and cardiovascular complications with comprehensive monitoring.</p>
+                    
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-700">
+                            <div class="w-2 h-2 bg-red-600 rounded-full mr-3"></div>
+                            24-hour blood pressure monitoring
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <div class="w-2 h-2 bg-red-600 rounded-full mr-3"></div>
+                            Medication optimization
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <div class="w-2 h-2 bg-red-600 rounded-full mr-3"></div>
+                            Cardiovascular risk assessment
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <div class="w-2 h-2 bg-red-600 rounded-full mr-3"></div>
+                            Lifestyle modification plans
+                        </li>
+                    </ul>
+                    
+                    <button class="text-red-600 font-semibold hover:text-red-800 transition-colors">
+                        Learn More →
+                    </button>
+                </div>
+
+                <!-- Kidney Transplant Care -->
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group hover:-translate-y-2 fade-in">
+                    <div class="bg-purple-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-purple-600 transition-colors duration-300">
+                        <i data-lucide="stethoscope" class="w-8 h-8 text-purple-600 group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Kidney Transplant Care</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Comprehensive pre and post-transplant care with thorough evaluation, preparation, and ongoing monitoring for optimal outcomes.</p>
+                    
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-700">
+                            <div class="w-2 h-2 bg-purple-600 rounded-full mr-3"></div>
+                            Pre-transplant evaluation
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <div class="w-2 h-2 bg-purple-600 rounded-full mr-3"></div>
+                            Post-operative care
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <div class="w-2 h-2 bg-purple-600 rounded-full mr-3"></div>
+                            Immunosuppression management
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <div class="w-2 h-2 bg-purple-600 rounded-full mr-3"></div>
+                            Long-term follow-up
+                        </li>
+                    </ul>
+                    
+                    <button class="text-purple-600 font-semibold hover:text-purple-800 transition-colors">
+                        Learn More →
+                    </button>
+                </div>
+
+                <!-- Chronic Care Management -->
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group hover:-translate-y-2 fade-in">
+                    <div class="bg-teal-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-teal-600 transition-colors duration-300">
+                        <i data-lucide="heart-plus" class="w-8 h-8 text-teal-600 group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Chronic Care Management</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Ongoing support for patients with multiple chronic conditions, enhancing health outcomes and coordinating comprehensive care services.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-700">
+                            <div class="w-2 h-2 bg-teal-600 rounded-full mr-3"></div>
+                            Care plan development
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <div class="w-2 h-2 bg-teal-600 rounded-full mr-3"></div>
+                            Monthly check-ins
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <div class="w-2 h-2 bg-teal-600 rounded-full mr-3"></div>
+                            Medication reconciliation
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <div class="w-2 h-2 bg-teal-600 rounded-full mr-3"></div>
+                            Coordination of services
+                        </li>
+                    </ul>
+                    <button class="text-teal-600 font-semibold hover:text-teal-800 transition-colors">
+                        Learn More →
+                    </button>
+                </div>
+                
+                <!-- Transitional Care Management -->
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group hover:-translate-y-2 fade-in">
+                    <div class="bg-pink-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-pink-600 transition-colors duration-300">
+                        <i data-lucide="repeat" class="w-8 h-8 text-pink-600 group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Transitional Care Management</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Assisting patients during transitions from hospital to home to reduce readmission risks and ensure seamless continuity of care.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-700">
+                            <div class="w-2 h-2 bg-pink-600 rounded-full mr-3"></div>
+                            Discharge planning
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <div class="w-2 h-2 bg-pink-600 rounded-full mr-3"></div>
+                            Medication review
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <div class="w-2 h-2 bg-pink-600 rounded-full mr-3"></div>
+                            Post-discharge follow-up
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <div class="w-2 h-2 bg-pink-600 rounded-full mr-3"></div>
+                            Patient education
+                        </li>
+                    </ul>
+                    <button class="text-pink-600 font-semibold hover:text-pink-800 transition-colors">
+                        Learn More →
+                    </button>
+                </div>
+
+                <!-- Principal Care Management -->
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group hover:-translate-y-2 fade-in">
+                    <div class="bg-orange-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-orange-600 transition-colors duration-300">
+                        <i data-lucide="target" class="w-8 h-8 text-orange-600 group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Principal Care Management</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Focused management for patients with a single high-risk chronic condition, ensuring specialized care and improved health outcomes.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-700">
+                            <div class="w-2 h-2 bg-orange-600 rounded-full mr-3"></div>
+                            Individualized care planning
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <div class="w-2 h-2 bg-orange-600 rounded-full mr-3"></div>
+                            Regular disease monitoring
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <div class="w-2 h-2 bg-orange-600 rounded-full mr-3"></div>
+                            Medication management
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <div class="w-2 h-2 bg-orange-600 rounded-full mr-3"></div>
+                            Patient engagement
+                        </li>
+                    </ul>
+                    <button class="text-orange-600 font-semibold hover:text-orange-800 transition-colors">
+                        Learn More →
+                    </button>
+                </div>
+
+                <!-- Kidney Biopsy -->
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group hover:-translate-y-2 fade-in">
+                    <div class="bg-yellow-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-yellow-600 transition-colors duration-300">
+                        <i data-lucide="microscope" class="w-8 h-8 text-yellow-600 group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Kidney Biopsy</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Advanced diagnostic procedures to determine the cause and extent of kidney disease using minimally invasive techniques.</p>
+                    
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-700">
+                            <div class="w-2 h-2 bg-yellow-600 rounded-full mr-3"></div>
+                            Minimally invasive procedure
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <div class="w-2 h-2 bg-yellow-600 rounded-full mr-3"></div>
+                            Expert pathological analysis
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <div class="w-2 h-2 bg-yellow-600 rounded-full mr-3"></div>
+                            Rapid results and reporting
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <div class="w-2 h-2 bg-yellow-600 rounded-full mr-3"></div>
+                            Treatment planning guidance
+                        </li>
+                    </ul>
+                    
+                    <button class="text-yellow-600 font-semibold hover:text-yellow-800 transition-colors">
+                        Learn More →
+                    </button>
+                </div>
+
+                <!-- Family Education -->
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group hover:-translate-y-2 fade-in">
+                    <div class="bg-indigo-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-indigo-600 transition-colors duration-300">
+                        <i data-lucide="users" class="w-8 h-8 text-indigo-600 group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Family Education</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Comprehensive education programs for patients and families about kidney health, treatment options, and lifestyle management.</p>
+                    
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-700">
+                            <div class="w-2 h-2 bg-indigo-600 rounded-full mr-3"></div>
+                            Nutritional counseling
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <div class="w-2 h-2 bg-indigo-600 rounded-full mr-3"></div>
+                            Lifestyle modification guidance
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <div class="w-2 h-2 bg-indigo-600 rounded-full mr-3"></div>
+                            Support group facilitation
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <div class="w-2 h-2 bg-indigo-600 rounded-full mr-3"></div>
+                            Educational workshops
+                        </li>
+                    </ul>
+                    
+                    <button class="text-indigo-600 font-semibold hover:text-indigo-800 transition-colors">
+                        Learn More →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl lg:text-5xl font-bold mb-6">Ready to Take Control of Your Kidney Health?</h2>
+            <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Our expert team is here to provide personalized care and support for all your nephrology needs. 
+                Schedule your consultation today.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg">
+                    Schedule Appointment
+                </button>
+                <a href="index.html#contact" class="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-colors font-semibold text-lg">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-4 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-3">
+                        <img src="images/" alt="NCJ Logo" class="h-12 w-auto filter">
+                        <div>
+                            <h3 class="text-xl font-bold">Nephrology Consultants</h3>
+                            <p class="text-gray-400">of Jax, LLC</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        Providing expert kidney care and nephrology services to Northeast Florida 
+                        for over 20 years. Your kidney health is our mission.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="services.html" class="text-white font-bold">Services</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="index.html#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Doctors -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Our Doctors</h4>
+                    <ul class="space-y-3">
+                        <li><a href="dr-hem-chataut.html" class="text-gray-300 hover:text-white transition-colors">Dr. Hem Chataut</a></li>
+                        <li><a href="dr-jeremy-carlson.html" class="text-gray-300 hover:text-white transition-colors">Dr. Jeremy Carlson</a></li>
+                        <li><a href="dr-haritha-sakhamuri.html" class="text-gray-300 hover:text-white transition-colors">Dr. Haritha Sakhamuri</a></li>
+                        <li><a href="dr-emma-bueno.html" class="text-gray-300 hover:text-white transition-colors">Dr. Emma Bueno</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Contact Info</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-gray-400 mt-1 flex-shrink-0"></i>
+                            <div class="text-gray-300">
+                                <p>1234 Medical Plaza</p>
+                                <p>Jacksonville, FL 32207</p>
+                                <p>Suite 200</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-gray-400 flex-shrink-0"></i>
+                            <div class="text-gray-300">
+                                <p>Office: (904) 555-0123</p>
+                                <p>Emergency: (904) 555-0911</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-gray-400 flex-shrink-0"></i>
+                            <div class="text-gray-300">
+                                <p>info@ncjconsultants.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="mt-12 pt-8 border-t border-gray-800">
+                <div class="text-center text-gray-400 text-sm">
+                    © 2024 Nephrology Consultants of Jax, LLC. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Fade in animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
+
